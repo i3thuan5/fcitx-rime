@@ -1,7 +1,7 @@
 [Addon]
 Name=fcitx-ithuan
 _GeneralName=Ithuan-w
-_Comment=Rime Wrapper For Fcitx
+_Comment=Ithuan Wrapper For Fcitx
 Category=InputMethod
 Enabled=True
 Library=fcitx-ithuan.so
