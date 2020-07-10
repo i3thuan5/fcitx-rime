@@ -1,0 +1,7 @@
+[InputMethod]
+UniqueName=ithuan
+_Name=Rime-w
+IconName=ithuan
+Priority=10
+LangCode=zh_TW
+Parent=fcitx-ithuan

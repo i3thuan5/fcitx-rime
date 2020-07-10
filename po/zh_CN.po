@@ -85,11 +85,11 @@ msgstr "向上翻页"
 #: src/fcitx-rime.c:70 src/fcitx-rime.c:129 src/fcitx-rime.conf.in:3
 #: src/rime.conf.in:3
 msgid "Rime"
-msgstr "中州韻"
+msgstr "台韻"
 
 #: src/fcitx-rime.conf.in:4
 msgid "Rime Wrapper For Fcitx"
-msgstr "Fcitx 的中州韻封装"
+msgstr "Fcitx 的台韻封装"
 
 #: src/fcitx-rime.c:64
 msgid "Rime has encountered an error. See /tmp/rime.fcitx.ERROR for details."

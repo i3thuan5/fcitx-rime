@@ -7,7 +7,7 @@ link_directories(${RIME_LIBRARY_DIRS})
 
 set(FCITX_RIME_SRC fcitx-rime.c)
 
-fcitx_add_addon_full(rime
+fcitx_add_addon_full(ithuan
   SOURCES ${FCITX_RIME_SRC}
-  IM_CONFIG rime.conf
+  IM_CONFIG ithuan.conf
   LINK_LIBS ${RIME_LIBRARIES} ${CMAKE_THREAD_LIBS_INIT})

@@ -1,6 +1,6 @@
 ## RIME support for Fcitx
 
-RIME(中州韻輸入法引擎) is _mainly_ a Traditional Chinese input method engine.
+RIME(台韻輸入法引擎) is _mainly_ a Traditional Chinese input method engine.
 
 project: https://code.google.com/p/rimeime
 

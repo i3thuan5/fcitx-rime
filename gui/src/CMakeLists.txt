@@ -18,19 +18,19 @@ fcitx_translate_add_sources(
   ${FRCU_HDRS}
   ${FRCU_UIS})
 
-add_library(fcitx-rime-config-gui
+add_library(fcitx-rime-config-gui-z
   MODULE ${FRCU_SRCS})
 
-set(AUTOGEN_BUILD_DIR "${CMAKE_BINARY_DIR}/gui/src/fcitx-rime-config-gui_autogen/include")
+set(AUTOGEN_BUILD_DIR "${CMAKE_BINARY_DIR}/gui/src/fcitx-rime-config-gui-z_autogen/include")
 file(COPY "${CMAKE_SOURCE_DIR}/gui/src/Common.h" DESTINATION "${AUTOGEN_BUILD_DIR}")
 
-set_target_properties(fcitx-rime-config-gui PROPERTIES
+set_target_properties(fcitx-rime-config-gui-z PROPERTIES
   LINK_FLAGS "-Wl,--no-undefined"
   AUTOMOC TRUE
   AUTOUIC TRUE
   AUTOUIC_OPTIONS "-tr=fcitx_rime::tr2fcitx;--include=Common.h")
 
-target_link_libraries(fcitx-rime-config-gui
+target_link_libraries(fcitx-rime-config-gui-z
   Qt5::Widgets
   Qt5::Concurrent
   FcitxQt5::WidgetsAddons
@@ -39,4 +39,4 @@ target_link_libraries(fcitx-rime-config-gui
   ${FCITX4_FCITX_CONFIG_LIBRARIES})
 
 
-install(TARGETS fcitx-rime-config-gui DESTINATION ${FCITX4_ADDON_INSTALL_DIR}/qt)
+install(TARGETS fcitx-rime-config-gui-z DESTINATION ${FCITX4_ADDON_INSTALL_DIR}/qt)

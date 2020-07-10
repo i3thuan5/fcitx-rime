@@ -1,10 +1,10 @@
 [Addon]
-Name=fcitx-rime
-_GeneralName=Rime
+Name=fcitx-ithuan
+_GeneralName=Rime-w
 _Comment=Rime Wrapper For Fcitx
 Category=InputMethod
 Enabled=True
-Library=fcitx-rime.so
+Library=fcitx-ithuan.so
 Type=SharedLibrary
 IMRegisterMethod=ConfigFile
 LoadLocal=True
