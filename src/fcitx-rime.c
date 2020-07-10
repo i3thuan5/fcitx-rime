@@ -7,7 +7,7 @@
 #include <libintl.h>
 #include <rime_api.h>
 
-#define _(x) dgettext("fcitx-rime-d", (x))
+#define _(x) dgettext("fcitx-rime-w", (x))
 
 typedef struct _FcitxRime {
     FcitxInstance* owner;
