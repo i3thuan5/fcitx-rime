@@ -53,7 +53,7 @@ void RimeConfigParser::start(bool firstRun) {
     fcitx_rime_traits.shared_data_dir = RIME_DATA_DIR;
     fcitx_rime_traits.app_name = "rime.fcitx-rime-config";
     fcitx_rime_traits.user_data_dir = user_path;
-    fcitx_rime_traits.distribution_name = "Rime";
+    fcitx_rime_traits.distribution_name = "Ithuan";
     fcitx_rime_traits.distribution_code_name = "fcitx-rime-config";
     fcitx_rime_traits.distribution_version = "0.0.2";
     if (firstRun) {

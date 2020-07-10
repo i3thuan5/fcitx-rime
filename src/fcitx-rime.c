@@ -85,7 +85,7 @@ static void FcitxRimeStart(FcitxRime* rime, boolean fullcheck) {
     fcitx_rime_traits.shared_data_dir = shared_data_dir;
     fcitx_rime_traits.app_name = "rime.fcitx-rime-fcitx_rime_traits";
     fcitx_rime_traits.user_data_dir = user_path;
-    fcitx_rime_traits.distribution_name = "Rime";
+    fcitx_rime_traits.distribution_name = "Ithuan";
     fcitx_rime_traits.distribution_code_name = "fcitx-rime-distribution_code_name";
     fcitx_rime_traits.distribution_version = "0.2.3";
     if (rime->firstRun) {

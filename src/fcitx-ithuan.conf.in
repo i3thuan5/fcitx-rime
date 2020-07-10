@@ -1,6 +1,6 @@
 [Addon]
 Name=fcitx-ithuan
-_GeneralName=Ithuan-w
+_GeneralName=Ithuan
 _Comment=Ithuan Wrapper For Fcitx
 Category=InputMethod
 Enabled=True
