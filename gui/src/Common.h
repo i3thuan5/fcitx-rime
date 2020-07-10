@@ -21,7 +21,7 @@
 #include <QString>
 #include <libintl.h>
 
-#define _(x) QString::fromUtf8(dgettext("fcitx-rime", x))
+#define _(x) QString::fromUtf8(dgettext("fcitx-rime-w", x))
 
 #define FCITX_RIME_ARRAY_SIZE(array) (sizeof(array) / sizeof(array[0]))
 

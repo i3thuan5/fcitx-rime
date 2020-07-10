@@ -7,7 +7,7 @@
 #include <libintl.h>
 #include <rime_api.h>
 
-#define _(x) dgettext("fcitx-rime", (x))
+#define _(x) dgettext("fcitx-rime-d", (x))
 
 typedef struct _FcitxRime {
     FcitxInstance* owner;
@@ -83,10 +83,10 @@ static void FcitxRimeStart(FcitxRime* rime, boolean fullcheck) {
 
     RIME_STRUCT(RimeTraits, fcitx_rime_traits);
     fcitx_rime_traits.shared_data_dir = shared_data_dir;
-    fcitx_rime_traits.app_name = "rime.fcitx-rime";
+    fcitx_rime_traits.app_name = "rime.fcitx-rime-fcitx_rime_traits";
     fcitx_rime_traits.user_data_dir = user_path;
     fcitx_rime_traits.distribution_name = "Rime";
-    fcitx_rime_traits.distribution_code_name = "fcitx-rime";
+    fcitx_rime_traits.distribution_code_name = "fcitx-rime-distribution_code_name";
     fcitx_rime_traits.distribution_version = "0.2.3";
     if (rime->firstRun) {
         rime->api->setup(&fcitx_rime_traits);

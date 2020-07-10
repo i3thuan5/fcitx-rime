@@ -237,9 +237,9 @@ void ConfigMain::activeIMSelectionChanged() {
 }
 // end of SLOTs
 
-QString ConfigMain::icon() { return "fcitx-rime"; }
+QString ConfigMain::icon() { return "fcitx-rime-w"; }
 
-QString ConfigMain::addon() { return "fcitx-rime"; }
+QString ConfigMain::addon() { return "fcitx-rime-w"; }
 
 QString ConfigMain::title() { return _("Fcitx Rime Config GUI Tool"); }
 
