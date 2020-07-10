@@ -54,11 +54,11 @@ msgid "English"
 msgstr ""
 
 #: src/fcitx-rime.conf.in:11
-msgid "Fcitx Rime Config"
+msgid "Fcitx Ithuan Config"
 msgstr ""
 
 #: gui/src/ConfigMain.cpp:244
-msgid "Fcitx Rime Config GUI Tool"
+msgid "Fcitx Ithuan Config GUI Tool"
 msgstr ""
 
 #. i18n: file: gui/src/ConfigMain.ui:114
@@ -83,26 +83,26 @@ msgstr ""
 
 #: src/fcitx-rime.c:70 src/fcitx-rime.c:129 src/fcitx-rime.conf.in:3
 #: src/rime.conf.in:3
-msgid "Rime"
-msgstr "Rime"
+msgid "Ithuan"
+msgstr "Ithuan"
 
 #: src/fcitx-rime.conf.in:4
-msgid "Rime Wrapper For Fcitx"
-msgstr "Fcitx 用 Rime ラッパー"
+msgid "Ithuan Wrapper For Fcitx"
+msgstr "Fcitx 用 Ithuan ラッパー"
 
 #: src/fcitx-rime.c:64
-msgid "Rime has encountered an error. See /tmp/rime.fcitx.ERROR for details."
+msgid "Ithuan has encountered an error. See /tmp/rime.fcitx.ERROR for details."
 msgstr ""
-"Rimeでエラーが起こりました。より詳しくは /tmp/rime.fcitx.ERROR を見てくださ"
+"Ithuanでエラーが起こりました。より詳しくは /tmp/rime.fcitx.ERROR を見てくださ"
 "い。"
 
 #: src/fcitx-rime.c:62
-msgid "Rime is ready."
-msgstr "Rimeの準備ができました。"
+msgid "Ithuan is ready."
+msgstr "Ithuanの準備ができました。"
 
 #: src/fcitx-rime.c:60
-msgid "Rime is under maintenance ..."
-msgstr "Rimeはメンテナンス中です..."
+msgid "Ithuan is under maintenance ..."
+msgstr "Ithuanはメンテナンス中です..."
 
 #. i18n: file: gui/src/ConfigMain.ui:195
 #. i18n: ectx: attribute (title), widget (QWidget, schemas_tab)

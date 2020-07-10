@@ -55,12 +55,12 @@ msgid "English"
 msgstr "英語"
 
 #: src/fcitx-rime.conf.in:11
-msgid "Fcitx Rime Config"
-msgstr "Fcitx Rime 設定"
+msgid "Fcitx Ithuan Config"
+msgstr "Fcitx Ithuan 設定"
 
 #: gui/src/ConfigMain.cpp:244
-msgid "Fcitx Rime Config GUI Tool"
-msgstr "Fcitx Rime 設定圖形介面工具"
+msgid "Fcitx Ithuan Config GUI Tool"
+msgstr "Fcitx Ithuan 設定圖形介面工具"
 
 #. i18n: file: gui/src/ConfigMain.ui:114
 #. i18n: ectx: property (text), widget (QLabel, toggle_hfshape)
@@ -84,24 +84,24 @@ msgstr "向上一頁"
 
 #: src/fcitx-rime.c:70 src/fcitx-rime.c:129 src/fcitx-rime.conf.in:3
 #: src/rime.conf.in:3
-msgid "Rime"
+msgid "Ithuan"
 msgstr "台韻"
 
 #: src/fcitx-rime.conf.in:4
-msgid "Rime Wrapper For Fcitx"
+msgid "Ithuan Wrapper For Fcitx"
 msgstr "Fcitx 的台韻封裝"
 
 #: src/fcitx-rime.c:64
-msgid "Rime has encountered an error. See /tmp/rime.fcitx.ERROR for details."
-msgstr "Rime 遇到了一個錯誤。見 /tmp/rime.fcitx.ERROR 以取得更多資訊。"
+msgid "Ithuan has encountered an error. See /tmp/rime.fcitx.ERROR for details."
+msgstr "Ithuan 遇到了一個錯誤。見 /tmp/rime.fcitx.ERROR 以取得更多資訊。"
 
 #: src/fcitx-rime.c:62
-msgid "Rime is ready."
-msgstr "Rime 準備好了。"
+msgid "Ithuan is ready."
+msgstr "Ithuan 準備好了。"
 
 #: src/fcitx-rime.c:60
-msgid "Rime is under maintenance ..."
-msgstr "Rime 仍在維護中..."
+msgid "Ithuan is under maintenance ..."
+msgstr "Ithuan 仍在維護中..."
 
 #. i18n: file: gui/src/ConfigMain.ui:195
 #. i18n: ectx: attribute (title), widget (QWidget, schemas_tab)

@@ -52,11 +52,11 @@ msgid "English"
 msgstr "İngilizce"
 
 #: src/fcitx-rime.conf.in:11
-msgid "Fcitx Rime Config"
+msgid "Fcitx Ithuan Config"
 msgstr ""
 
 #: gui/src/ConfigMain.cpp:244
-msgid "Fcitx Rime Config GUI Tool"
+msgid "Fcitx Ithuan Config GUI Tool"
 msgstr ""
 
 #. i18n: file: gui/src/ConfigMain.ui:114
@@ -81,26 +81,26 @@ msgstr ""
 
 #: src/fcitx-rime.c:70 src/fcitx-rime.c:129 src/fcitx-rime.conf.in:3
 #: src/rime.conf.in:3
-msgid "Rime"
-msgstr "Rime"
+msgid "Ithuan"
+msgstr "Ithuan"
 
 #: src/fcitx-rime.conf.in:4
-msgid "Rime Wrapper For Fcitx"
-msgstr "Fcitx için Rime Wrapper"
+msgid "Ithuan Wrapper For Fcitx"
+msgstr "Fcitx için Ithuan Wrapper"
 
 #: src/fcitx-rime.c:64
-msgid "Rime has encountered an error. See /tmp/rime.fcitx.ERROR for details."
+msgid "Ithuan has encountered an error. See /tmp/rime.fcitx.ERROR for details."
 msgstr ""
-"Rime bir hatayla karşılaştı. Detaylar için  /tmp/rime.fcitx.ERROR  yoluna "
+"Ithuan bir hatayla karşılaştı. Detaylar için  /tmp/rime.fcitx.ERROR  yoluna "
 "bakın."
 
 #: src/fcitx-rime.c:62
-msgid "Rime is ready."
-msgstr "Rime hazır."
+msgid "Ithuan is ready."
+msgstr "Ithuan hazır."
 
 #: src/fcitx-rime.c:60
-msgid "Rime is under maintenance ..."
-msgstr "Rime bakımda..."
+msgid "Ithuan is under maintenance ..."
+msgstr "Ithuan bakımda..."
 
 #. i18n: file: gui/src/ConfigMain.ui:195
 #. i18n: ectx: attribute (title), widget (QWidget, schemas_tab)

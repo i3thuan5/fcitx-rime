@@ -18,24 +18,24 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 
 #: gui/src/ConfigMain.cpp:246
-msgid "Fcitx Rime Config GUI Tool"
+msgid "Fcitx Ithuan Config GUI Tool"
 msgstr ""
 
 #: src/fcitx-rime.c:60
-msgid "Rime is under maintenance ..."
+msgid "Ithuan is under maintenance ..."
 msgstr ""
 
 #: src/fcitx-rime.c:62
-msgid "Rime is ready."
+msgid "Ithuan is ready."
 msgstr ""
 
 #: src/fcitx-rime.c:64
-msgid "Rime has encountered an error. See /tmp/rime.fcitx.ERROR for details."
+msgid "Ithuan has encountered an error. See /tmp/rime.fcitx.ERROR for details."
 msgstr ""
 
 #: src/fcitx-rime.c:70 src/fcitx-rime.c:128 src/fcitx-rime.conf.in:3
 #: src/rime.conf.in:3
-msgid "Rime"
+msgid "Ithuan"
 msgstr ""
 
 #: src/fcitx-rime.c:148 src/fcitx-rime.c:149
@@ -55,11 +55,11 @@ msgid "English"
 msgstr ""
 
 #: src/fcitx-rime.conf.in:4
-msgid "Rime Wrapper For Fcitx"
+msgid "Ithuan Wrapper For Fcitx"
 msgstr ""
 
 #: src/fcitx-rime.conf.in:11
-msgid "Fcitx Rime Config"
+msgid "Fcitx Ithuan Config"
 msgstr ""
 
 #. i18n: file: gui/src/ConfigMain.ui:14

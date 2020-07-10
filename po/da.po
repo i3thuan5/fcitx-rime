@@ -52,12 +52,12 @@ msgid "English"
 msgstr "Engelsk"
 
 #: src/fcitx-rime.conf.in:11
-msgid "Fcitx Rime Config"
-msgstr "Fcitx Rime-konfiguration"
+msgid "Fcitx Ithuan Config"
+msgstr "Fcitx Ithuan-konfiguration"
 
 #: gui/src/ConfigMain.cpp:244
-msgid "Fcitx Rime Config GUI Tool"
-msgstr "Fcitx Rime-konfigurationsværktøj med grafisk brugerflade"
+msgid "Fcitx Ithuan Config GUI Tool"
+msgstr "Fcitx Ithuan-konfigurationsværktøj med grafisk brugerflade"
 
 #. i18n: file: gui/src/ConfigMain.ui:114
 #. i18n: ectx: property (text), widget (QLabel, toggle_hfshape)
@@ -81,24 +81,24 @@ msgstr "Page Up"
 
 #: src/fcitx-rime.c:70 src/fcitx-rime.c:129 src/fcitx-rime.conf.in:3
 #: src/rime.conf.in:3
-msgid "Rime"
-msgstr "Rime"
+msgid "Ithuan"
+msgstr "Ithuan"
 
 #: src/fcitx-rime.conf.in:4
-msgid "Rime Wrapper For Fcitx"
-msgstr "Rime-wrapper til Fcitx"
+msgid "Ithuan Wrapper For Fcitx"
+msgstr "Ithuan-wrapper til Fcitx"
 
 #: src/fcitx-rime.c:64
-msgid "Rime has encountered an error. See /tmp/rime.fcitx.ERROR for details."
-msgstr "Rime stødte på en fejl. Se /tmp/rime.fcitx.ERROR for detaljer."
+msgid "Ithuan has encountered an error. See /tmp/rime.fcitx.ERROR for details."
+msgstr "Ithuan stødte på en fejl. Se /tmp/rime.fcitx.ERROR for detaljer."
 
 #: src/fcitx-rime.c:62
-msgid "Rime is ready."
-msgstr "Rime er klar."
+msgid "Ithuan is ready."
+msgstr "Ithuan er klar."
 
 #: src/fcitx-rime.c:60
-msgid "Rime is under maintenance ..."
-msgstr "Rime er ved at blive vedligeholdt ..."
+msgid "Ithuan is under maintenance ..."
+msgstr "Ithuan er ved at blive vedligeholdt ..."
 
 #. i18n: file: gui/src/ConfigMain.ui:195
 #. i18n: ectx: attribute (title), widget (QWidget, schemas_tab)

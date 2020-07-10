@@ -53,11 +53,11 @@ msgid "English"
 msgstr ""
 
 #: src/fcitx-rime.conf.in:11
-msgid "Fcitx Rime Config"
+msgid "Fcitx Ithuan Config"
 msgstr ""
 
 #: gui/src/ConfigMain.cpp:244
-msgid "Fcitx Rime Config GUI Tool"
+msgid "Fcitx Ithuan Config GUI Tool"
 msgstr ""
 
 #. i18n: file: gui/src/ConfigMain.ui:114
@@ -82,24 +82,24 @@ msgstr ""
 
 #: src/fcitx-rime.c:70 src/fcitx-rime.c:129 src/fcitx-rime.conf.in:3
 #: src/rime.conf.in:3
-msgid "Rime"
-msgstr "Rime"
+msgid "Ithuan"
+msgstr "Ithuan"
 
 #: src/fcitx-rime.conf.in:4
-msgid "Rime Wrapper For Fcitx"
+msgid "Ithuan Wrapper For Fcitx"
 msgstr "Bộ Wrapper cho Fcitx"
 
 #: src/fcitx-rime.c:64
-msgid "Rime has encountered an error. See /tmp/rime.fcitx.ERROR for details."
-msgstr "Rime gặp lỗi. Xem ở /tmp/rime.fcitx.ERROR để biết chi tiết."
+msgid "Ithuan has encountered an error. See /tmp/rime.fcitx.ERROR for details."
+msgstr "Ithuan gặp lỗi. Xem ở /tmp/rime.fcitx.ERROR để biết chi tiết."
 
 #: src/fcitx-rime.c:62
-msgid "Rime is ready."
-msgstr "Rime sẵn sàng,"
+msgid "Ithuan is ready."
+msgstr "Ithuan sẵn sàng,"
 
 #: src/fcitx-rime.c:60
-msgid "Rime is under maintenance ..."
-msgstr "Rime đang bảo trì..."
+msgid "Ithuan is under maintenance ..."
+msgstr "Ithuan đang bảo trì..."
 
 #. i18n: file: gui/src/ConfigMain.ui:195
 #. i18n: ectx: attribute (title), widget (QWidget, schemas_tab)
