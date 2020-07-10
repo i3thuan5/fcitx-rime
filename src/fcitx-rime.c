@@ -57,36 +57,36 @@ void FcitxRimeNotificationHandler(void* context_object,
     FcitxRime* rime = (FcitxRime*) context_object;
     if (!strcmp(message_type, "deploy")) {
         if (!strcmp(message_value, "start")) {
-            message = _("Rime is under maintenance ...");
+            message = _("Ithuan is under maintenance ...");
         } else if (!strcmp(message_value, "success")) {
-            message = _("Rime is ready.");
+            message = _("Ithuan is ready.");
         } else if (!strcmp(message_value, "failure")) {
-            message = _("Rime has encountered an error. "
-                        "See /tmp/rime.fcitx.ERROR for details.");
+            message = _("Ithuan has encountered an error. "
+                        "See /tmp/ithuan.fcitx.ERROR for details.");
         }
     }
 
     if (message) {
-        FcitxFreeDesktopNotifyShowAddonTip(rime->owner, "fcitx-rime-deploy", "fcitx-rime-deploy", _("Rime"), message);
+        FcitxFreeDesktopNotifyShowAddonTip(rime->owner, "fcitx-ithuan-deploy", "fcitx-ithuan-deploy", _("Ithuan"), message);
     }
 }
 
 static void FcitxRimeStart(FcitxRime* rime, boolean fullcheck) {
 
     char* user_path = NULL;
-    FILE* fp = FcitxXDGGetFileUserWithPrefix("rime", ".place_holder", "w", NULL);
+    FILE* fp = FcitxXDGGetFileUserWithPrefix("ithuan", ".place_holder", "w", NULL);
     if (fp)
         fclose(fp);
-    FcitxXDGGetFileUserWithPrefix("rime", "", NULL, &user_path);
+    FcitxXDGGetFileUserWithPrefix("ithuan", "", NULL, &user_path);
     //char* shared_data_dir = fcitx_utils_get_fcitx_path_with_filename("pkgdatadir", "rime");
     const char* shared_data_dir = RIME_DATA_DIR;
 
     RIME_STRUCT(RimeTraits, fcitx_rime_traits);
     fcitx_rime_traits.shared_data_dir = shared_data_dir;
-    fcitx_rime_traits.app_name = "rime.fcitx-rime-fcitx_rime_traits";
+    fcitx_rime_traits.app_name = "ithuan.fcitx-rime";
     fcitx_rime_traits.user_data_dir = user_path;
     fcitx_rime_traits.distribution_name = "Ithuan";
-    fcitx_rime_traits.distribution_code_name = "fcitx-rime-distribution_code_name";
+    fcitx_rime_traits.distribution_code_name = "fcitx-ithuan";
     fcitx_rime_traits.distribution_version = "0.2.3";
     if (rime->firstRun) {
         rime->api->setup(&fcitx_rime_traits);
@@ -125,9 +125,9 @@ static void* FcitxRimeCreate(FcitxInstance* instance)
     FcitxInstanceRegisterIMv2(
         instance,
         rime,
-        "rime",
-        _("Rime"),
-        "rime",
+        "ithuan",
+        _("Ithuan"),
+        "ithuan",
         iface,
         10,
         "zh"
@@ -136,7 +136,7 @@ static void* FcitxRimeCreate(FcitxInstance* instance)
     FcitxUIRegisterComplexStatus(
         instance,
         rime,
-        "rime-enzh",
+        "ithuan-enzh",
         "",
         "",
         FcitxRimeToggleEnZh,
@@ -145,7 +145,7 @@ static void* FcitxRimeCreate(FcitxInstance* instance)
     FcitxUIRegisterComplexStatus(
         instance,
         rime,
-        "rime-deploy",
+        "ithuan-deploy",
         _("Deploy"),
         _("Deploy"),
         FcitxRimeToggleDeploy,
@@ -154,15 +154,15 @@ static void* FcitxRimeCreate(FcitxInstance* instance)
     FcitxUIRegisterComplexStatus(
         instance,
         rime,
-        "rime-sync",
+        "ithuan-sync",
         _("Synchronize"),
         _("Synchronize"),
         FcitxRimeToggleSync,
         FcitxRimeGetSyncIcon);
 
-    FcitxUISetStatusVisable(instance, "rime-enzh", false);
-    FcitxUISetStatusVisable(instance, "rime-sync", false);
-    FcitxUISetStatusVisable(instance, "rime-deploy", false);
+    FcitxUISetStatusVisable(instance, "ithuan-enzh", false);
+    FcitxUISetStatusVisable(instance, "ithuan-sync", false);
+    FcitxUISetStatusVisable(instance, "ithuan-deploy", false);
     FcitxIMEventHook hk;
     hk.arg = rime;
     hk.func = FcitxRimeResetUI;
@@ -171,7 +171,7 @@ static void* FcitxRimeCreate(FcitxInstance* instance)
     
     FcitxMenuInit(&rime->schemamenu);
     rime->schemamenu.name = strdup(_("Schema List"));
-    rime->schemamenu.candStatusBind = strdup("rime-enzh");
+    rime->schemamenu.candStatusBind = strdup("ithuan-enzh");
     rime->schemamenu.MenuAction = FcitxRimeSchemaMenuAction;
     rime->schemamenu.UpdateMenu = FcitxRimeSchemaMenuUpdate;
     rime->schemamenu.priv = rime;
@@ -266,10 +266,10 @@ void FcitxRimeUpdateStatus(FcitxRime* rime)
         } else {
             text = "中";
         }
-        FcitxUISetStatusString(rime->owner, "rime-enzh", text, text);
+        FcitxUISetStatusString(rime->owner, "ithuan-enzh", text, text);
         rime->api->free_status(&status);
     } else {
-        FcitxUISetStatusString(rime->owner, "rime-enzh", "\xe2\x8c\x9b", "\xe2\x8c\x9b");
+        FcitxUISetStatusString(rime->owner, "ithuan-enzh", "\xe2\x8c\x9b", "\xe2\x8c\x9b");
     }
 }
 
@@ -543,31 +543,31 @@ static const char* FcitxRimeGetIMIcon(void* arg)
     if (rime->api->get_status(rime->session_id, &status)) {
         char* text = "";
         if (status.is_disabled) {
-            text = "@rime-disable";
+            text = "@ithuan-disable";
         } else if (status.is_ascii_mode) {
-            text = "@rime-latin";
+            text = "@ithuan-latin";
         } else if (status.schema_id) {
             fcitx_utils_free(rime->iconname);
-            fcitx_utils_alloc_cat_str(rime->iconname, "@rime-im-", status.schema_id);
+            fcitx_utils_alloc_cat_str(rime->iconname, "@ithuan-im-", status.schema_id);
             text = rime->iconname;
         } else {
-            text = "@rime-im";
+            text = "@ithuan-im";
         }
         rime->api->free_status(&status);
 
         return text;
     }
-    return "@rime-disable";
+    return "@ithuan-disable";
 }
 
 static const char* FcitxRimeGetDeployIcon(void *arg)
 {
-    return "rime-deploy";
+    return "ithuan-deploy";
 }
 
 static const char* FcitxRimeGetSyncIcon(void *arg)
 {
-    return "rime-sync";
+    return "ithuan-sync";
 }
 
 
@@ -583,13 +583,13 @@ void FcitxRimeResetUI(void* arg)
     FcitxInstance* instance = rime->owner;
     FcitxIM* im = FcitxInstanceGetCurrentIM(instance);
     boolean visible;
-    if (!im || strcmp(im->uniqueName, "rime") != 0)
+    if (!im || strcmp(im->uniqueName, "ithuan") != 0)
         visible = false;
     else
         visible = true;
-    FcitxUISetStatusVisable(instance, "rime-enzh", visible);
-    FcitxUISetStatusVisable(instance, "rime-sync", visible);
-    FcitxUISetStatusVisable(instance, "rime-deploy", visible);
+    FcitxUISetStatusVisable(instance, "ithuan-enzh", visible);
+    FcitxUISetStatusVisable(instance, "ithuan-sync", visible);
+    FcitxUISetStatusVisable(instance, "ithuan-deploy", visible);
 }
 
 void FcitxRimeToggleSync(void* arg)
