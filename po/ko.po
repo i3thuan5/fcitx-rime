@@ -90,9 +90,9 @@ msgid "Ithuan Wrapper For Fcitx"
 msgstr "Fcitx용 라임 래퍼"
 
 #: src/fcitx-rime.c:64
-msgid "Ithuan has encountered an error. See /tmp/rime.fcitx.ERROR for details."
+msgid "Ithuan has encountered an error. See /tmp/ithuan.fcitx.ERROR for details."
 msgstr ""
-"라임에서 오류가 발생했습니다. 자세한 내용은 /tmp/rime.fcitx.ERROR를 참조하시"
+"라임에서 오류가 발생했습니다. 자세한 내용은 /tmp/ithuan.fcitx.ERROR를 참조하시"
 "기 바랍니다."
 
 #: src/fcitx-rime.c:62

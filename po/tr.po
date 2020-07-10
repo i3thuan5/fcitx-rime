@@ -89,9 +89,9 @@ msgid "Ithuan Wrapper For Fcitx"
 msgstr "Fcitx için Ithuan Wrapper"
 
 #: src/fcitx-rime.c:64
-msgid "Ithuan has encountered an error. See /tmp/rime.fcitx.ERROR for details."
+msgid "Ithuan has encountered an error. See /tmp/ithuan.fcitx.ERROR for details."
 msgstr ""
-"Ithuan bir hatayla karşılaştı. Detaylar için  /tmp/rime.fcitx.ERROR  yoluna "
+"Ithuan bir hatayla karşılaştı. Detaylar için  /tmp/ithuan.fcitx.ERROR  yoluna "
 "bakın."
 
 #: src/fcitx-rime.c:62

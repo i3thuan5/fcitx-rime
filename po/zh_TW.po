@@ -92,8 +92,8 @@ msgid "Ithuan Wrapper For Fcitx"
 msgstr "Fcitx 的台韻封裝"
 
 #: src/fcitx-rime.c:64
-msgid "Ithuan has encountered an error. See /tmp/rime.fcitx.ERROR for details."
-msgstr "Ithuan 遇到了一個錯誤。見 /tmp/rime.fcitx.ERROR 以取得更多資訊。"
+msgid "Ithuan has encountered an error. See /tmp/ithuan.fcitx.ERROR for details."
+msgstr "Ithuan 遇到了一個錯誤。見 /tmp/ithuan.fcitx.ERROR 以取得更多資訊。"
 
 #: src/fcitx-rime.c:62
 msgid "Ithuan is ready."

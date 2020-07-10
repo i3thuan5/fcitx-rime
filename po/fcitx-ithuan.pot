@@ -30,7 +30,7 @@ msgid "Ithuan is ready."
 msgstr ""
 
 #: src/fcitx-rime.c:64
-msgid "Ithuan has encountered an error. See /tmp/rime.fcitx.ERROR for details."
+msgid "Ithuan has encountered an error. See /tmp/ithuan.fcitx.ERROR for details."
 msgstr ""
 
 #: src/fcitx-rime.c:70 src/fcitx-rime.c:128 src/fcitx-rime.conf.in:3
