@@ -6,7 +6,7 @@ set(CMAKE_MODULE_PATH ${PROJECT_SOURCE_DIR}/cmake)
 
 include(FindPkgConfig)
 find_package(Fcitx 4.2.8.1 REQUIRED)
-pkg_check_modules(RIME "rime>=1.0.0" REQUIRED)
+# pkg_check_modules(RIME "rime>=1.0.0" REQUIRED)
 
 if(NOT DEFINED RIME_DATA_DIR)
   find_package(RimeData REQUIRED)
@@ -25,10 +25,10 @@ configure_file(
     "${CMAKE_CURRENT_BINARY_DIR}/cmake_uninstall.cmake"
     IMMEDIATE @ONLY)
 
-add_custom_target(uninstall
-    COMMAND ${CMAKE_COMMAND} -P ${CMAKE_CURRENT_BINARY_DIR}/cmake_uninstall.cmake)
+#add_custom_target(uninstall
+    #COMMAND ${CMAKE_COMMAND} -P ${CMAKE_CURRENT_BINARY_DIR}/cmake_uninstall.cmake)
 
-option(ENABLE_QT5GUI "Build the Rime Config GUI Tool" ON)
+option(ENABLE_QT5GUI "Build the Rime Config GUI Tool" OFF)
 
 add_subdirectory(po)
 add_subdirectory(src)
