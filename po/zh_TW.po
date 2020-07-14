@@ -85,23 +85,23 @@ msgstr "向上一頁"
 #: src/fcitx-rime.c:70 src/fcitx-rime.c:129 src/fcitx-rime.conf.in:3
 #: src/rime.conf.in:3
 msgid "Ithuan"
-msgstr "台韻"
+msgstr "意傳"
 
 #: src/fcitx-rime.conf.in:4
 msgid "Ithuan Wrapper For Fcitx"
-msgstr "Fcitx 的台韻封裝"
+msgstr "Fcitx 的意傳"
 
 #: src/fcitx-rime.c:64
 msgid "Ithuan has encountered an error. See /tmp/ithuan.fcitx.ERROR for details."
-msgstr "Ithuan 遇到了一個錯誤。見 /tmp/ithuan.fcitx.ERROR 以取得更多資訊。"
+msgstr "意傳遇到了一個錯誤。見 /tmp/ithuan.fcitx.ERROR 以取得更多資訊。"
 
 #: src/fcitx-rime.c:62
 msgid "Ithuan is ready."
-msgstr "Ithuan 準備好了。"
+msgstr "意傳準備好--ah。"
 
 #: src/fcitx-rime.c:60
 msgid "Ithuan is under maintenance ..."
-msgstr "Ithuan 仍在維護中..."
+msgstr "意傳koh tih tshuân……"
 
 #. i18n: file: gui/src/ConfigMain.ui:195
 #. i18n: ectx: attribute (title), widget (QWidget, schemas_tab)
@@ -129,12 +129,12 @@ msgstr "繁體/簡體"
 #. i18n: file: gui/src/ConfigMain.ui:139
 #. i18n: ectx: property (text), widget (QLabel, toggle_ascii)
 msgid "Western/Eastern"
-msgstr "英文/中文"
+msgstr "英文/台文"
 
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
-msgstr "pan93412@gmail.com, s8321414@gmail.com,"
+msgstr "ithuan@ithuan.tw"
 
 msgctxt "NAME OF TRANSLATORS"
 msgid "Your names"
-msgstr "Yi-Jyun Pan, Jeff Huang, Alisha"
+msgstr "ÌTHUÂNKHOKI"

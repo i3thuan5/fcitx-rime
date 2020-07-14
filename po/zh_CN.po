@@ -85,19 +85,19 @@ msgstr "向上翻页"
 #: src/fcitx-rime.c:70 src/fcitx-rime.c:129 src/fcitx-rime.conf.in:3
 #: src/rime.conf.in:3
 msgid "Ithuan"
-msgstr "台韻"
+msgstr "意傳"
 
 #: src/fcitx-rime.conf.in:4
 msgid "Ithuan Wrapper For Fcitx"
-msgstr "Fcitx 的台韻封装"
+msgstr "Fcitx 的意傳"
 
 #: src/fcitx-rime.c:64
 msgid "Ithuan has encountered an error. See /tmp/ithuan.fcitx.ERROR for details."
-msgstr "Ithuan 出现了一个错误。请参阅/tmp/ithuan.fcitx.ERROR中细节。"
+msgstr "意傳出现了一个错误。请参阅/tmp/ithuan.fcitx.ERROR中细节。"
 
 #: src/fcitx-rime.c:62
 msgid "Ithuan is ready."
-msgstr "Ithuan 就绪。"
+msgstr "意傳就绪。"
 
 #: src/fcitx-rime.c:60
 msgid "Ithuan is under maintenance ..."
@@ -129,7 +129,7 @@ msgstr "繁体/简体"
 #. i18n: file: gui/src/ConfigMain.ui:139
 #. i18n: ectx: property (text), widget (QLabel, toggle_ascii)
 msgid "Western/Eastern"
-msgstr "英文/中文"
+msgstr "英文/台文"
 
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
