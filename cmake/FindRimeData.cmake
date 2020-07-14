@@ -4,10 +4,10 @@
 # RIME_DATA_FOUND - System has rime-data package
 # RIME_DATA_DIR - rime-data absolute path
 
-set(RIME_DATA_FIND_DIR "${CMAKE_INSTALL_PREFIX}/share/rime-data"
-                       "${CMAKE_INSTALL_PREFIX}/share/rime/data"
-                       "/usr/share/rime-data"
-                       "/usr/share/rime/data")
+set(RIME_DATA_FIND_DIR "${CMAKE_INSTALL_PREFIX}/share/ithuan-data"
+                       "${CMAKE_INSTALL_PREFIX}/share/ithuan/data"
+                       "/usr/share/ithuan-data"
+                       "/usr/share/ithuan/data")
 
 set(RIME_DATA_FOUND FALSE)
 
