@@ -161,6 +161,15 @@ static void* FcitxRimeCreate(FcitxInstance* instance)
         FcitxRimeToggleSync,
         FcitxRimeGetSyncIcon);
 
+    FcitxUIRegisterComplexStatus(
+        instance,
+        rime,
+        "ithuan-pan-pun",
+        "a.a.a",
+        "333.333.333",
+        NULL,
+        NULL);
+
     FcitxUISetStatusVisable(instance, "ithuan-enzh", false);
     FcitxUISetStatusVisable(instance, "ithuan-sync", false);
     FcitxUISetStatusVisable(instance, "ithuan-deploy", false);
@@ -178,16 +187,6 @@ static void* FcitxRimeCreate(FcitxInstance* instance)
     rime->schemamenu.priv = rime;
     rime->schemamenu.isSubMenu = false;
     FcitxUIRegisterMenu(rime->owner, &rime->schemamenu);
-
-    //Tsu-tsheh pan-pun-ho
-    FcitxMenuInit(&rime->versionmenu);
-    rime->versionmenu.name = strdup(_("ithuan-pan-pun"));
-    rime->versionmenu.candStatusBind = NULL;
-    rime->versionmenu.MenuAction = NULL;
-    rime->versionmenu.UpdateMenu = NULL;
-    rime->versionmenu.priv = NULL;
-    rime->versionmenu.isSubMenu = false;
-    FcitxUIRegisterMenu(rime->owner, &rime->versionmenu);
 
     return rime;
 }
