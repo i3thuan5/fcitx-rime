@@ -16,7 +16,6 @@ typedef struct _FcitxRime {
     RimeApi* api;
     boolean firstRun;
     FcitxUIMenu schemamenu;
-    FcitxUIMenu versionmenu;
 } FcitxRime;
 
 static void* FcitxRimeCreate(FcitxInstance* instance);
@@ -165,7 +164,7 @@ static void* FcitxRimeCreate(FcitxInstance* instance)
         instance,
         rime,
         "ithuan-pan-pun",
-        "a.a.a",
+        "333.333.333",
         "333.333.333",
         NULL,
         NULL);
@@ -173,6 +172,7 @@ static void* FcitxRimeCreate(FcitxInstance* instance)
     FcitxUISetStatusVisable(instance, "ithuan-enzh", false);
     FcitxUISetStatusVisable(instance, "ithuan-sync", false);
     FcitxUISetStatusVisable(instance, "ithuan-deploy", false);
+    FcitxUISetStatusVisable(instance, "ithuan-pan-pun", false);
     FcitxIMEventHook hk;
     hk.arg = rime;
     hk.func = FcitxRimeResetUI;
