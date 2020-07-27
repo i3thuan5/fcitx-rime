@@ -16,6 +16,7 @@ typedef struct _FcitxRime {
     RimeApi* api;
     boolean firstRun;
     FcitxUIMenu schemamenu;
+    FcitxUIMenu versionmenu;
 } FcitxRime;
 
 static void* FcitxRimeCreate(FcitxInstance* instance);
@@ -177,6 +178,16 @@ static void* FcitxRimeCreate(FcitxInstance* instance)
     rime->schemamenu.priv = rime;
     rime->schemamenu.isSubMenu = false;
     FcitxUIRegisterMenu(rime->owner, &rime->schemamenu);
+
+    //Tsu-tsheh pan-pun-ho
+    FcitxMenuInit(&rime->versionmenu);
+    rime->versionmenu.name = strdup(_("ithuan-pan-pun"));
+    rime->versionmenu.candStatusBind = NULL;
+    rime->versionmenu.MenuAction = NULL;
+    rime->versionmenu.UpdateMenu = NULL;
+    rime->versionmenu.priv = NULL;
+    rime->versionmenu.isSubMenu = false;
+    FcitxUIRegisterMenu(rime->owner, &rime->versionmenu);
 
     return rime;
 }
@@ -525,7 +536,6 @@ void FcitxRimeSchemaMenuUpdate(FcitxUIMenu* menu)
 
     FcitxMenuClear(menu);
 
-    FcitxMenuAddMenuItem(menu, _("PAN-PUN-HO"), MENUTYPE_SIMPLE, NULL);
     FcitxMenuAddMenuItem(menu, _("English"), MENUTYPE_SIMPLE, NULL);
     RimeSchemaList list = {0};
     if (rime->api->get_schema_list(&list)) {
