@@ -525,6 +525,7 @@ void FcitxRimeSchemaMenuUpdate(FcitxUIMenu* menu)
 
     FcitxMenuClear(menu);
 
+    FcitxMenuAddMenuItem(menu, _("PAN-PUN-HO"), MENUTYPE_SIMPLE, NULL);
     FcitxMenuAddMenuItem(menu, _("English"), MENUTYPE_SIMPLE, NULL);
     RimeSchemaList list = {0};
     if (rime->api->get_schema_list(&list)) {
