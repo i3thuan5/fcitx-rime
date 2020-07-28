@@ -171,10 +171,10 @@ static void* FcitxRimeCreate(FcitxInstance* instance)
         FcitxRimeTogglePanPun,
         FcitxRimeGetPanPunIcon);
 
-    // FcitxUISetStatusVisable(instance, "ithuan-enzh", false);
-    // FcitxUISetStatusVisable(instance, "ithuan-sync", false);
-    // FcitxUISetStatusVisable(instance, "ithuan-deploy", false);
-    // FcitxUISetStatusVisable(instance, "ithuan-pan-pun", false);
+    FcitxUISetStatusVisable(instance, "ithuan-enzh", false);
+    FcitxUISetStatusVisable(instance, "ithuan-sync", false);
+    FcitxUISetStatusVisable(instance, "ithuan-deploy", false);
+    FcitxUISetStatusVisable(instance, "ithuan-pan-pun", false);
     FcitxIMEventHook hk;
     hk.arg = rime;
     hk.func = FcitxRimeResetUI;
@@ -607,6 +607,7 @@ void FcitxRimeResetUI(void* arg)
     FcitxUISetStatusVisable(instance, "ithuan-enzh", visible);
     FcitxUISetStatusVisable(instance, "ithuan-sync", visible);
     FcitxUISetStatusVisable(instance, "ithuan-deploy", visible);
+    FcitxUISetStatusVisable(instance, "ithuan-pan-pun", visible);
 }
 
 void FcitxRimeToggleSync(void* arg)
