@@ -48,7 +48,7 @@ msgstr "候选词个数"
 
 #: src/fcitx-rime.c:149 src/fcitx-rime.c:150
 msgid "Deploy"
-msgstr "重新部署"
+msgstr "輸入法重設定"
 
 #: src/fcitx-rime.c:528
 msgid "English"
