@@ -217,7 +217,7 @@ boolean FcitxRimeInit(void* arg)
     FcitxInstanceSetContext(rime->owner, CONTEXT_DISABLE_AUTO_FIRST_CANDIDATE_HIGHTLIGHT, &flag);
     FcitxInstanceSetContext(rime->owner, CONTEXT_DISABLE_AUTOENG, &flag);
     FcitxInstanceSetContext(rime->owner, CONTEXT_DISABLE_QUICKPHRASE, &flag);
-
+    FcitxInstanceSetContext(rime->owner, CONTEXT_DISABLE_FULLWIDTH, &flag);
     FcitxRimeUpdateStatus(rime);
 
     return true;
