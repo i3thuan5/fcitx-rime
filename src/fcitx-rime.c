@@ -15,7 +15,7 @@ typedef struct _FcitxRime {
     char* iconname;
     RimeApi* api;
     boolean firstRun;
-    FcitxUIMenu schemamenu;
+    // FcitxUIMenu schemamenu;
 } FcitxRime;
 
 static void* FcitxRimeCreate(FcitxInstance* instance);
@@ -144,14 +144,14 @@ static void* FcitxRimeCreate(FcitxInstance* instance)
     //     FcitxRimeToggleEnZh,
     //     FcitxRimeGetIMIcon);
 
-    // FcitxUIRegisterComplexStatus(
-    //     instance,
-    //     rime,
-    //     "ithuan-deploy",
-    //     _("Deploy"),
-    //     _("Deploy"),
-    //     FcitxRimeToggleDeploy,
-    //     FcitxRimeGetDeployIcon);
+    FcitxUIRegisterComplexStatus(
+        instance,
+        rime,
+        "ithuan-deploy",
+        _("Deploy"),
+        _("Deploy"),
+        FcitxRimeToggleDeploy,
+        FcitxRimeGetDeployIcon);
 
     // FcitxUIRegisterComplexStatus(
     //     instance,
@@ -171,8 +171,8 @@ static void* FcitxRimeCreate(FcitxInstance* instance)
         FcitxRimeTogglePanPun,
         FcitxRimeGetPanPunIcon);
 
-    FcitxUISetStatusVisable(instance, "ithuan-enzh", false);
-    FcitxUISetStatusVisable(instance, "ithuan-sync", false);
+    // FcitxUISetStatusVisable(instance, "ithuan-enzh", false);
+    // FcitxUISetStatusVisable(instance, "ithuan-sync", false);
     FcitxUISetStatusVisable(instance, "ithuan-deploy", false);
     FcitxUISetStatusVisable(instance, "ithuan-pan-pun", false);
     FcitxIMEventHook hk;
@@ -181,14 +181,14 @@ static void* FcitxRimeCreate(FcitxInstance* instance)
 
     FcitxInstanceRegisterResetInputHook(instance, hk);
     
-    FcitxMenuInit(&rime->schemamenu);
-    rime->schemamenu.name = strdup(_("Schema List"));
-    rime->schemamenu.candStatusBind = strdup("ithuan-enzh");
-    rime->schemamenu.MenuAction = FcitxRimeSchemaMenuAction;
-    rime->schemamenu.UpdateMenu = FcitxRimeSchemaMenuUpdate;
-    rime->schemamenu.priv = rime;
-    rime->schemamenu.isSubMenu = false;
-    FcitxUIRegisterMenu(rime->owner, &rime->schemamenu);
+    // FcitxMenuInit(&rime->schemamenu);
+    // rime->schemamenu.name = strdup(_("Schema List"));
+    // rime->schemamenu.candStatusBind = strdup("ithuan-enzh");
+    // rime->schemamenu.MenuAction = FcitxRimeSchemaMenuAction;
+    // rime->schemamenu.UpdateMenu = FcitxRimeSchemaMenuUpdate;
+    // rime->schemamenu.priv = rime;
+    // rime->schemamenu.isSubMenu = false;
+    // FcitxUIRegisterMenu(rime->owner, &rime->schemamenu);
 
     return rime;
 }
@@ -201,8 +201,8 @@ void FcitxRimeDestroy(void* arg)
         rime->session_id = 0;
     }
 
-    FcitxUIUnRegisterMenu(rime->owner, &rime->schemamenu);
-    FcitxMenuFinalize(&rime->schemamenu);
+    // FcitxUIUnRegisterMenu(rime->owner, &rime->schemamenu);
+    // FcitxMenuFinalize(&rime->schemamenu);
     
     fcitx_utils_free(rime->iconname);
     rime->api->finalize();
@@ -604,8 +604,8 @@ void FcitxRimeResetUI(void* arg)
         visible = false;
     else
         visible = true;
-    FcitxUISetStatusVisable(instance, "ithuan-enzh", visible);
-    FcitxUISetStatusVisable(instance, "ithuan-sync", visible);
+    // FcitxUISetStatusVisable(instance, "ithuan-enzh", visible);
+    // FcitxUISetStatusVisable(instance, "ithuan-sync", visible);
     FcitxUISetStatusVisable(instance, "ithuan-deploy", visible);
     FcitxUISetStatusVisable(instance, "ithuan-pan-pun", visible);
 }
