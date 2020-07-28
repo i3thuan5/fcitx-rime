@@ -138,3 +138,7 @@ msgstr "ithuan@ithuan.tw"
 msgctxt "NAME OF TRANSLATORS"
 msgid "Your names"
 msgstr "ÌTHUÂNKHOKI"
+
+#: src/fcitx-rime.c:172
+msgid "ithuan-pan-pun"
+msgstr "PAN-PUN-HO"
