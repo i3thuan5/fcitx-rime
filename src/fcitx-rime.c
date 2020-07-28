@@ -166,8 +166,8 @@ static void* FcitxRimeCreate(FcitxInstance* instance)
         instance,
         rime,
         "ithuan-pan-pun",
-        "sui.sui",
-        "333.333.333",
+        _("ithuan-pan-pun"),
+        _("ithuan-pan-pun"),
         FcitxRimeTogglePanPun,
         FcitxRimeGetPanPunIcon);
 

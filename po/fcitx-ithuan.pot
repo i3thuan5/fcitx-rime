@@ -52,7 +52,7 @@ msgstr ""
 
 #: src/fcitx-rime.c:172
 msgid "ithuan-pan-pun"
-msgstr "PAN-PUN-HO123"
+msgstr "PAN-PUN-HO"
 
 
 #: src/fcitx-rime.c:527
