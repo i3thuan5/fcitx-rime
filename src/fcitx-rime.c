@@ -133,46 +133,46 @@ static void* FcitxRimeCreate(FcitxInstance* instance)
         "zh"
     );
 
-    FcitxUIRegisterComplexStatus(
-        instance,
-        rime,
-        "ithuan-enzh",
-        "",
-        "",
-        FcitxRimeToggleEnZh,
-        FcitxRimeGetIMIcon);
+    // FcitxUIRegisterComplexStatus(
+    //     instance,
+    //     rime,
+    //     "ithuan-enzh",
+    //     "",
+    //     "",
+    //     FcitxRimeToggleEnZh,
+    //     FcitxRimeGetIMIcon);
 
-    FcitxUIRegisterComplexStatus(
-        instance,
-        rime,
-        "ithuan-deploy",
-        _("Deploy"),
-        _("Deploy"),
-        FcitxRimeToggleDeploy,
-        FcitxRimeGetDeployIcon);
+    // FcitxUIRegisterComplexStatus(
+    //     instance,
+    //     rime,
+    //     "ithuan-deploy",
+    //     _("Deploy"),
+    //     _("Deploy"),
+    //     FcitxRimeToggleDeploy,
+    //     FcitxRimeGetDeployIcon);
 
-    FcitxUIRegisterComplexStatus(
-        instance,
-        rime,
-        "ithuan-sync",
-        _("Synchronize"),
-        _("Synchronize"),
-        FcitxRimeToggleSync,
-        FcitxRimeGetSyncIcon);
+    // FcitxUIRegisterComplexStatus(
+    //     instance,
+    //     rime,
+    //     "ithuan-sync",
+    //     _("Synchronize"),
+    //     _("Synchronize"),
+    //     FcitxRimeToggleSync,
+    //     FcitxRimeGetSyncIcon);
 
-    FcitxUIRegisterComplexStatus(
-        instance,
-        rime,
-        "ithuan-pan-pun",
-        "333.333.333",
-        "333.333.333",
-        NULL,
-        NULL);
+    // FcitxUIRegisterComplexStatus(
+    //     instance,
+    //     rime,
+    //     "ithuan-pan-pun",
+    //     "333.333.333",
+    //     "333.333.333",
+    //     NULL,
+    //     NULL);
 
-    FcitxUISetStatusVisable(instance, "ithuan-enzh", false);
-    FcitxUISetStatusVisable(instance, "ithuan-sync", false);
-    FcitxUISetStatusVisable(instance, "ithuan-deploy", false);
-    FcitxUISetStatusVisable(instance, "ithuan-pan-pun", false);
+    // FcitxUISetStatusVisable(instance, "ithuan-enzh", false);
+    // FcitxUISetStatusVisable(instance, "ithuan-sync", false);
+    // FcitxUISetStatusVisable(instance, "ithuan-deploy", false);
+    // FcitxUISetStatusVisable(instance, "ithuan-pan-pun", false);
     FcitxIMEventHook hk;
     hk.arg = rime;
     hk.func = FcitxRimeResetUI;
