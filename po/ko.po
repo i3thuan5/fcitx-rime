@@ -138,3 +138,7 @@ msgstr "daemul72@gmail.com"
 msgctxt "NAME OF TRANSLATORS"
 msgid "Your names"
 msgstr "이정희(JungHee Lee)"
+
+#: src/fcitx-rime.c:172
+msgid "ithuan-pan-pun"
+msgstr "PAN-PUN-HO"

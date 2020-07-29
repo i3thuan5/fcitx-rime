@@ -15,7 +15,7 @@ typedef struct _FcitxRime {
     char* iconname;
     RimeApi* api;
     boolean firstRun;
-    FcitxUIMenu schemamenu;
+    // FcitxUIMenu schemamenu;
 } FcitxRime;
 
 static void* FcitxRimeCreate(FcitxInstance* instance);
@@ -31,8 +31,10 @@ static void FcitxRimeToggleEnZh(void* arg);
 static const char* FcitxRimeGetIMIcon(void* arg);
 static const char* FcitxRimeGetDeployIcon(void *arg);
 static const char* FcitxRimeGetSyncIcon(void *arg);
+static const char* FcitxRimeGetPanPunIcon(void *arg);
 static void FcitxRimeToggleSync(void* arg);
 static void FcitxRimeToggleDeploy(void* arg);
+static void FcitxRimeTogglePanPun(void* arg);
 static void FcitxRimeResetUI(void* arg);
 static void FcitxRimeUpdateStatus(FcitxRime* rime);
 static boolean FcitxRimeSchemaMenuAction(FcitxUIMenu *menu, int index);
@@ -133,14 +135,14 @@ static void* FcitxRimeCreate(FcitxInstance* instance)
         "zh"
     );
 
-    FcitxUIRegisterComplexStatus(
-        instance,
-        rime,
-        "ithuan-enzh",
-        "",
-        "",
-        FcitxRimeToggleEnZh,
-        FcitxRimeGetIMIcon);
+    // FcitxUIRegisterComplexStatus(
+    //     instance,
+    //     rime,
+    //     "ithuan-enzh",
+    //     "",
+    //     "",
+    //     FcitxRimeToggleEnZh,
+    //     FcitxRimeGetIMIcon);
 
     FcitxUIRegisterComplexStatus(
         instance,
@@ -151,32 +153,42 @@ static void* FcitxRimeCreate(FcitxInstance* instance)
         FcitxRimeToggleDeploy,
         FcitxRimeGetDeployIcon);
 
+    // FcitxUIRegisterComplexStatus(
+    //     instance,
+    //     rime,
+    //     "ithuan-sync",
+    //     _("Synchronize"),
+    //     _("Synchronize"),
+    //     FcitxRimeToggleSync,
+    //     FcitxRimeGetSyncIcon);
+
     FcitxUIRegisterComplexStatus(
         instance,
         rime,
-        "ithuan-sync",
-        _("Synchronize"),
-        _("Synchronize"),
-        FcitxRimeToggleSync,
-        FcitxRimeGetSyncIcon);
+        "ithuan-pan-pun",
+        _("ithuan-pan-pun"),
+        _("ithuan-pan-pun"),
+        FcitxRimeTogglePanPun,
+        FcitxRimeGetPanPunIcon);
 
-    FcitxUISetStatusVisable(instance, "ithuan-enzh", false);
-    FcitxUISetStatusVisable(instance, "ithuan-sync", false);
+    // FcitxUISetStatusVisable(instance, "ithuan-enzh", false);
+    // FcitxUISetStatusVisable(instance, "ithuan-sync", false);
     FcitxUISetStatusVisable(instance, "ithuan-deploy", false);
+    FcitxUISetStatusVisable(instance, "ithuan-pan-pun", false);
     FcitxIMEventHook hk;
     hk.arg = rime;
     hk.func = FcitxRimeResetUI;
 
     FcitxInstanceRegisterResetInputHook(instance, hk);
     
-    FcitxMenuInit(&rime->schemamenu);
-    rime->schemamenu.name = strdup(_("Schema List"));
-    rime->schemamenu.candStatusBind = strdup("ithuan-enzh");
-    rime->schemamenu.MenuAction = FcitxRimeSchemaMenuAction;
-    rime->schemamenu.UpdateMenu = FcitxRimeSchemaMenuUpdate;
-    rime->schemamenu.priv = rime;
-    rime->schemamenu.isSubMenu = false;
-    FcitxUIRegisterMenu(rime->owner, &rime->schemamenu);
+    // FcitxMenuInit(&rime->schemamenu);
+    // rime->schemamenu.name = strdup(_("Schema List"));
+    // rime->schemamenu.candStatusBind = strdup("ithuan-enzh");
+    // rime->schemamenu.MenuAction = FcitxRimeSchemaMenuAction;
+    // rime->schemamenu.UpdateMenu = FcitxRimeSchemaMenuUpdate;
+    // rime->schemamenu.priv = rime;
+    // rime->schemamenu.isSubMenu = false;
+    // FcitxUIRegisterMenu(rime->owner, &rime->schemamenu);
 
     return rime;
 }
@@ -189,8 +201,8 @@ void FcitxRimeDestroy(void* arg)
         rime->session_id = 0;
     }
 
-    FcitxUIUnRegisterMenu(rime->owner, &rime->schemamenu);
-    FcitxMenuFinalize(&rime->schemamenu);
+    // FcitxUIUnRegisterMenu(rime->owner, &rime->schemamenu);
+    // FcitxMenuFinalize(&rime->schemamenu);
     
     fcitx_utils_free(rime->iconname);
     rime->api->finalize();
@@ -205,7 +217,7 @@ boolean FcitxRimeInit(void* arg)
     FcitxInstanceSetContext(rime->owner, CONTEXT_DISABLE_AUTO_FIRST_CANDIDATE_HIGHTLIGHT, &flag);
     FcitxInstanceSetContext(rime->owner, CONTEXT_DISABLE_AUTOENG, &flag);
     FcitxInstanceSetContext(rime->owner, CONTEXT_DISABLE_QUICKPHRASE, &flag);
-
+    FcitxInstanceSetContext(rime->owner, CONTEXT_DISABLE_FULLWIDTH, &flag);
     FcitxRimeUpdateStatus(rime);
 
     return true;
@@ -570,6 +582,11 @@ static const char* FcitxRimeGetSyncIcon(void *arg)
     return "ithuan-sync";
 }
 
+static const char* FcitxRimeGetPanPunIcon(void *arg)
+{
+    return "ithuan-sync";
+}
+
 
 void FcitxRimeToggleEnZh(void* arg)
 {
@@ -587,9 +604,10 @@ void FcitxRimeResetUI(void* arg)
         visible = false;
     else
         visible = true;
-    FcitxUISetStatusVisable(instance, "ithuan-enzh", visible);
-    FcitxUISetStatusVisable(instance, "ithuan-sync", visible);
+    // FcitxUISetStatusVisable(instance, "ithuan-enzh", visible);
+    // FcitxUISetStatusVisable(instance, "ithuan-sync", visible);
     FcitxUISetStatusVisable(instance, "ithuan-deploy", visible);
+    FcitxUISetStatusVisable(instance, "ithuan-pan-pun", visible);
 }
 
 void FcitxRimeToggleSync(void* arg)
@@ -598,6 +616,11 @@ void FcitxRimeToggleSync(void* arg)
     rime->api->sync_user_data();
     FcitxRimeGetCandWords(rime);
     FcitxUIUpdateInputWindow(rime->owner);
+}
+
+void FcitxRimeTogglePanPun(void *arg)
+{
+
 }
 
 void FcitxRimeToggleDeploy(void* arg)
