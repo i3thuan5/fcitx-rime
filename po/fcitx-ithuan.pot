@@ -54,7 +54,6 @@ msgstr ""
 msgid "ithuan-pan-pun"
 msgstr "PAN-PUN-HO"
 
-
 #: src/fcitx-rime.c:527
 msgid "English"
 msgstr ""
