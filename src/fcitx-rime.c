@@ -388,6 +388,15 @@ boolean FcitxRimePaging(void* arg, boolean prev) {
     return result;
 }
 
+char* tuitsiau(const char *str)
+{
+    char *kiatko = malloc(strlen(str) + 1 + 2);
+    kiatko[0] = '\t';
+    kiatko[1] = '\t';
+    strcpy(kiatko + 2, str);
+    return kiatko;
+}
+
 INPUT_RETURN_VALUE FcitxRimeGetCandWords(void* arg)
 {
     FcitxRime *rime = (FcitxRime *)arg;
@@ -455,7 +464,7 @@ INPUT_RETURN_VALUE FcitxRimeGetCandWords(void* arg)
                 candWord.wordType = MSG_CANDIATE_CURSOR;
             else
                 candWord.wordType = MSG_OTHER;
-            candWord.strExtra = context.menu.candidates[i].comment ? strdup (context.menu.candidates[i].comment) : NULL;
+            candWord.strExtra = context.menu.candidates[i].comment ? tuitsiau(context.menu.candidates[i].comment) : NULL;
             candWord.extraType = MSG_CODE;
             candWord.callback = FcitxRimeGetCandWord;
             candWord.owner = rime;
